@@ -102,6 +102,45 @@ describe('Campaigns', () => {
     assert(balance > initialBalance + 4.9);
   });
 
+  //--------------------- Not in videos ---------------------\\
+  it('request rejects multiple approvals', async () => {
+    
+    await campaign.methods.contribute().send({
+      from: accounts[0],
+      value: web3.utils.toWei('10', 'ether')
+    });
+
+    await campaign.methods.createRequest('A', web3.utils.toWei('5', 'ether'), accounts[2])
+      .send({ from: accounts[0], gas: '1000000' });
+    await campaign.methods.approveRequest(0).send({
+      from: accounts[0],
+      gas: '1000000'
+    });
+
+    try {    
+      await campaign.methods.approveRequest(0).send({
+        from: accounts[0],
+        gas: '1000000'
+      });
+      assert(false);
+    } catch (err) {
+      assert(err);
+    }
+
+  });
+
+  it('request rejects approvals from non-contributors', async () => {
+    try {
+      await campaign.methods.approveRequest(0).send({
+        from: accounts[5],
+        gas: '1000000'
+      });
+      assert(false);
+    } catch (err) {
+      assert(err);
+    }
+  });
+
 });
 
 
