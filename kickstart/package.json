@@ -15,6 +15,7 @@
     "nodemon": "^1.17.3",
     "npm": "^5.8.0",
     "solc": "^0.4.21",
+    "truffle-hdwallet-provider": "0.0.3",
     "web3": "^1.0.0-beta.26"
   }
 }
