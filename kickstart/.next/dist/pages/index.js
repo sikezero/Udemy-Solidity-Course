@@ -55,7 +55,17 @@ var CampaignIndex = function (_Component) {
   }
 
   (0, _createClass3.default)(CampaignIndex, [{
-    key: 'componentDidMount',
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      }, this.props.campaigns[0]);
+    }
+  }], [{
+    key: 'getInitialProps',
     value: function () {
       var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
         var campaigns;
@@ -68,8 +78,7 @@ var CampaignIndex = function (_Component) {
 
               case 2:
                 campaigns = _context.sent;
-
-                console.log(campaigns);
+                return _context.abrupt('return', { campaigns: campaigns });
 
               case 4:
               case 'end':
@@ -79,26 +88,16 @@ var CampaignIndex = function (_Component) {
         }, _callee, this);
       }));
 
-      function componentDidMount() {
+      function getInitialProps() {
         return _ref.apply(this, arguments);
       }
 
-      return componentDidMount;
+      return getInitialProps;
     }()
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement('div', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, 'Campaigns Index');
-    }
   }]);
 
   return CampaignIndex;
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhbXBhaWduSW5kZXgiLCJtZXRob2RzIiwiZ2V0RGVwbG95ZWRDYW1wYWlnbnMiLCJjYWxsIiwiY2FtcGFpZ25zIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPLEFBQWE7Ozs7Ozs7OztJQUVkLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7dUJBRXNCLGtCQUFBLEFBQVEsUUFBUixBQUFnQix1QkFBaEIsQUFBdUMsQTs7bUJBQXpEO0EscUNBQ047O3dCQUFBLEFBQVEsSUFBUixBQUFZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NkJBR0wsQUFDUDs2QkFBTyxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsT0FBQSxFQUFQLEFBQU8sQUFDUjs7Ozs7QUFSeUIsQSxBQVc1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvaXNhYWNtaWxsZXIvRG9jdW1lbnRzL1Byb2dyYW1taW5nL1VkZW15IFNvbGlkaXR5IENvdXJzZS9raWNrc3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhbXBhaWduSW5kZXgiLCJwcm9wcyIsImNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaWducyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTyxBQUFhOzs7Ozs7Ozs7SUFFZCxBOzs7Ozs7Ozs7Ozs2QkFNSyxBQUNQOzZCQUFPLGNBQUE7O29CQUFBO3NCQUFBLEFBQU07QUFBTjtBQUFBLE9BQUEsT0FBTSxBQUFLLE1BQUwsQUFBVyxVQUF4QixBQUFPLEFBQU0sQUFBcUIsQUFDbkM7Ozs7Ozs7Ozs7Ozt1QkFOeUIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHVCQUFoQixBQUF1QyxBOzttQkFBekQ7QTtpREFDQyxFQUFFLFdBQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUhpQixBLEFBVzVCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9pc2FhY21pbGxlci9Eb2N1bWVudHMvUHJvZ3JhbW1pbmcvVWRlbXkgU29saWRpdHkgQ291cnNlL2tpY2tzdGFydCJ9
